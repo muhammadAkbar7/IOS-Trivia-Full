@@ -12,9 +12,9 @@ The following **required** functionality is completed:
 
 - [x] User can view and answer at least 5 trivia questions.
 - [x] App retrieves question data from the Open Trivia Database API.
-- [ ] Fetch a different set of questions if the user indicates they would like to reset the game.
+- [x] Fetch a different set of questions if the user indicates they would like to reset the game.
 - [x] Users can see score after submitting all questions.
-- [ ] True or False questions only have two options.
+- [x] True or False questions only have two options.
 
 
 The following **optional** features are implemented:
@@ -30,11 +30,11 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 <div>
-    <a href="https://www.loom.com/share/f4a161cfe70743bbb90fd93da9a6d3ad">
-      <p>Simulator - iPhone 15 Pro - 19 March 2024 - Watch Video</p>
+    <a href="https://www.loom.com/share/b689f99524ae483d8d937e4e6dd043ea">
+      <p>Simulator - iPhone 15 Pro - 20 March 2024 - Watch Video</p>
     </a>
-    <a href="https://www.loom.com/share/f4a161cfe70743bbb90fd93da9a6d3ad">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f4a161cfe70743bbb90fd93da9a6d3ad-with-play.gif">
+    <a href="https://www.loom.com/share/b689f99524ae483d8d937e4e6dd043ea">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/b689f99524ae483d8d937e4e6dd043ea-with-play.gif">
     </a>
   </div>
 
