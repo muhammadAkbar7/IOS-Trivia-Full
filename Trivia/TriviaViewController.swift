@@ -26,11 +26,37 @@ class TriviaViewController: UIViewController {
     super.viewDidLoad()
     addGradient()
     questionContainerView.layer.cornerRadius = 8.0
+    //updateQuestion(withQuestionIndex: 0)
     // TODO: FETCH TRIVIA QUESTIONS HERE
+    fetchTrivia()
   }
+    
+    private func fetchTrivia() {
+      FetchTrivia.fetchTriviaGen() { [weak self] trivs in
+        guard let self = self else { return }
+        
+        // Assign fetched trivia questions to the questions array
+        self.questions = trivs
+        
+        // Update UI with the first question
+        self.updateQuestion(withQuestionIndex: 0)
+      }
+    }
   
   private func updateQuestion(withQuestionIndex questionIndex: Int) {
+//      FetchTrivia.fetchTriviaGen() { trivs in
+//          
+//          // Configure UI with each fetched trivia question
+//          for triv in trivs {
+//              self.configure(with: triv)
+//          }
+//          
+//          // After configuring UI, assign the fetched trivia questions to the questions array
+//          self.questions = trivs
+//      }
+      
     currentQuestionNumberLabel.text = "Question: \(questionIndex + 1)/\(questions.count)"
+     //print(questions[0])
     let question = questions[questionIndex]
     questionLabel.text = question.question
     categoryLabel.text = question.category
@@ -51,6 +77,16 @@ class TriviaViewController: UIViewController {
       answerButton3.isHidden = false
     }
   }
+    
+//    private func configure(with triv: TriviaQuestion) {
+//        questionLabel.text = triv.question
+//        categoryLabel.text = triv.category
+//        currentQuestionNumberLabel.text = String(currQuestionIndex)
+//        answerButton0.setTitle(triv.correctAnswer, for: .normal)
+//        answerButton1.setTitle(triv.incorrectAnswers[0], for: .normal)
+//        answerButton2.setTitle(triv.incorrectAnswers[1], for: .normal)
+//        answerButton3.setTitle(triv.incorrectAnswers[2], for: .normal)
+//    }
   
   private func updateToNextQuestion(answer: String) {
     if isCorrectAnswer(answer) {

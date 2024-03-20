@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "112FD497-655B-466D-A7FC-6134B8192D29"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3D43DEC-7ED2-4684-B31A-2F20D78F3820"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trivia/TriviaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "updateQuestion(withQuestionIndex:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D3D43DEC-7ED2-4684-B31A-2F20D78F3820 - 3815238d6dedfb0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Trivia.TriviaViewController.updateQuestion(withQuestionIndex: Swift.Int) -&gt; ()"
+                  moduleName = "Trivia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akbar/Swift%20Projects/IOS-Trivia-Full/Trivia/TriviaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1180">
+               </Location>
+               <Location
+                  uuid = "D3D43DEC-7ED2-4684-B31A-2F20D78F3820 - 3815238d6dedfb0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Trivia.TriviaViewController.updateQuestion(withQuestionIndex: Swift.Int) -&gt; ()"
+                  moduleName = "Trivia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akbar/Swift%20Projects/IOS-Trivia-Full/Trivia/TriviaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "836">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC8FFD5B-3637-4325-850E-83BCB2CFC753"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trivia/TriviaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "updateQuestion(withQuestionIndex:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EC8FFD5B-3637-4325-850E-83BCB2CFC753 - 3815238d6dedc4b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Trivia.TriviaViewController.updateQuestion(withQuestionIndex: Swift.Int) -&gt; ()"
+                  moduleName = "Trivia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akbar/Swift%20Projects/IOS-Trivia-Full/Trivia/TriviaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "EC8FFD5B-3637-4325-850E-83BCB2CFC753 - 23e52a078955c50a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Trivia.TriviaQuestion&gt;) -&gt; () in Trivia.TriviaViewController.updateQuestion(withQuestionIndex: Swift.Int) -&gt; ()"
+                  moduleName = "Trivia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akbar/Swift%20Projects/IOS-Trivia-Full/Trivia/TriviaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
