@@ -26,8 +26,6 @@ class TriviaViewController: UIViewController {
     super.viewDidLoad()
     addGradient()
     questionContainerView.layer.cornerRadius = 8.0
-    //updateQuestion(withQuestionIndex: 0)
-    // TODO: FETCH TRIVIA QUESTIONS HERE
     fetchTrivia()
   }
     
@@ -44,49 +42,51 @@ class TriviaViewController: UIViewController {
     }
   
   private func updateQuestion(withQuestionIndex questionIndex: Int) {
-//      FetchTrivia.fetchTriviaGen() { trivs in
-//          
-//          // Configure UI with each fetched trivia question
-//          for triv in trivs {
-//              self.configure(with: triv)
-//          }
-//          
-//          // After configuring UI, assign the fetched trivia questions to the questions array
-//          self.questions = trivs
-//      }
       
     currentQuestionNumberLabel.text = "Question: \(questionIndex + 1)/\(questions.count)"
      //print(questions[0])
+    
     let question = questions[questionIndex]
-    questionLabel.text = question.question
+      questionLabel.text = convertHTMLToPlainText( question.question)
     categoryLabel.text = question.category
     let answers = ([question.correctAnswer] + question.incorrectAnswers).shuffled()
+      if (question.type == "boolean") {
+          answerButton2.isHidden = true;
+          answerButton3.isHidden = true;
+      }
+      
     if answers.count > 0 {
-      answerButton0.setTitle(answers[0], for: .normal)
+        answerButton0.setTitle(convertHTMLToPlainText(answers[0]), for: .normal)
     }
     if answers.count > 1 {
-      answerButton1.setTitle(answers[1], for: .normal)
+      answerButton1.setTitle(convertHTMLToPlainText(answers[1]), for: .normal)
       answerButton1.isHidden = false
     }
     if answers.count > 2 {
-      answerButton2.setTitle(answers[2], for: .normal)
+      answerButton2.setTitle(convertHTMLToPlainText(answers[2]), for: .normal)
       answerButton2.isHidden = false
     }
     if answers.count > 3 {
-      answerButton3.setTitle(answers[3], for: .normal)
+      answerButton3.setTitle(convertHTMLToPlainText(answers[3]), for: .normal)
       answerButton3.isHidden = false
     }
   }
     
-//    private func configure(with triv: TriviaQuestion) {
-//        questionLabel.text = triv.question
-//        categoryLabel.text = triv.category
-//        currentQuestionNumberLabel.text = String(currQuestionIndex)
-//        answerButton0.setTitle(triv.correctAnswer, for: .normal)
-//        answerButton1.setTitle(triv.incorrectAnswers[0], for: .normal)
-//        answerButton2.setTitle(triv.incorrectAnswers[1], for: .normal)
-//        answerButton3.setTitle(triv.incorrectAnswers[2], for: .normal)
+//    func convertHTML(htmlString: String) -> String? {
+//        return htmlString.replacingOccurrences(of: "&quot;", with: "\"")
 //    }
+    
+  func convertHTMLToPlainText(_ htmlString: String) -> String? {
+        guard let data = htmlString.data(using: .utf8) else {
+            return nil
+        }
+
+        guard let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else {
+            return nil
+        }
+
+        return attributedString.string
+    }
   
   private func updateToNextQuestion(answer: String) {
     if isCorrectAnswer(answer) {
@@ -112,6 +112,7 @@ class TriviaViewController: UIViewController {
       currQuestionIndex = 0
       numCorrectQuestions = 0
       updateQuestion(withQuestionIndex: currQuestionIndex)
+      fetchTrivia()
     }
     alertController.addAction(resetAction)
     present(alertController, animated: true, completion: nil)

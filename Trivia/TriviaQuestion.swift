@@ -16,12 +16,14 @@ struct TriviaAPIResponse: Decodable {
 }
 
 struct TriviaQuestion: Decodable {
+  let type: String
   let category: String
   let question: String
   let correctAnswer: String
   let incorrectAnswers: [String]
     
     private enum CodingKeys: String, CodingKey{
+        case type
         case category = "category"
         case question = "question"
         case correctAnswer = "correct_answer"
